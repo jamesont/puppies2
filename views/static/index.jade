@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        style
+            include ../../public/stylesheets/style.css
+        title Daisy Hill Puppy Farm
+    body
+        h1 Puppy Inventory
+        //- p= JSON.stringify(puppiesArray)
+        ul Current List:
+        each puppy in puppiesArray
+            li="Puppy #" + puppy.id + ": " + puppy.name + " is " + puppy.age + " years old!!"
+
+        p: #[span To add a puppy go to the] #[a(href="../puppies/new") submission] #[span page]
+
+        p
+            | For more information:
+        p
+            a(href='../../about') About
+        p
+            a(href='../../contact') Contact
